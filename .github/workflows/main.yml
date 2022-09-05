@@ -150,6 +150,7 @@ jobs:
         with:
           platform: Android
           dir: ./ColdClear
+          tag: android-merge-test
       - name: Process ColdClear
         shell: bash
         run: |
@@ -170,7 +171,6 @@ jobs:
           keystore-store-password: ${{ secrets.ANDROID_KEYSTORE_STOREPASSWORD }}
           love-package: ${{ env.CORE_LOVE_PACKAGE_PATH }}
           resource-path: ./.github/build/android/${{ env.BUILD_TYPE }}/res
-          libs-path: ./ColdClear/
           extra-assets: ./libAndroid/
           product-name: ${{ steps.process-app-name.outputs.product-name }}
           version-string: ${{ needs.get-info.outputs.version-string }}
