@@ -150,7 +150,7 @@ jobs:
         with:
           platform: Android
           dir: ./ColdClear
-          tag: android-merge-test
+          tag: android-merge-2
       - name: Process ColdClear
         shell: bash
         run: |
